@@ -29,3 +29,4 @@ La aplicación conserva las fórmulas y categorías de los modelos Diao 2025 y S
 # AudioPronostico
 # AudioPronostico
 # AudioPronostico
+# AudioPronostico
