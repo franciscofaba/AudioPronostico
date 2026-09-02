@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { @apply border-slate-200; }
+  html { @apply overflow-x-hidden; }
+  body { @apply m-0 min-w-0 overflow-x-hidden bg-shell text-ink antialiased; }
+  button, input, select { font: inherit; }
+  button, select { touch-action: manipulation; }
+}
+
+@layer components {
+  .card { @apply min-w-0 rounded-2xl border border-white/80 bg-white shadow-soft sm:rounded-[1.4rem]; }
+  .field { @apply min-h-12 w-full min-w-0 rounded-xl border border-slate-200 bg-white px-3.5 py-3 text-base font-semibold text-ink outline-none transition focus:border-teal-500 focus:ring-4 focus:ring-teal-500/10 sm:text-sm; }
+  .label { @apply mb-2 block text-[11px] font-bold uppercase tracking-[0.13em] text-slate-500; }
+}
+
+.range-track { background: linear-gradient(90deg, #eb735b 0%, #e9b84a 45%, #278474 100%); }
+.fade-up { animation: fade-up .45s ease-out both; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  .card { box-shadow: none; break-inside: avoid; }
+  main { padding: 0 !important; }
+}
